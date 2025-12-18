@@ -1,61 +1,37 @@
 #include <stdio.h>
 
 int main()
-
 {
-
-    int i, num, temp = 1; 
-
-    // read input from user.
-
-    printf("Enter any numb to Check for Prime: ");
-
-    scanf("%d", &num);
-    if (num == 0 || num == 1 )//if(num<=1)
-
-    {
-        temp=0;
-     }
-
-    // iterate up to n/2.
-    else
-    {
+    int i, num;
+    int isPrime = 1;  // Better variable name than temp
     
-       for (i = 2; i <= num / 2; i++)
-
+    printf("Enter any number to Check for Prime: ");
+    scanf("%d", &num);
+    
+    if (num <= 1)
     {
-       // check if num is divisible by any number.
-
-        if (num % i == 0)
-
-        {
-
-            temp=0;
-            break;
-
-        }
-
-    } 
+        isPrime = 0;
     }
-
-    // check for the value of temp and num. 
-
-    if (temp == 1)
-
-    {
-
-        printf("%d is a Prime number\n", num);
-
-    }
-
     else
-
     {
-
-        printf("%d is not a Prime number\n", num);
-
+        for (i = 2; i <= num / 2; i++)
+        {
+            if (num % i == 0)
+            {
+                isPrime = 0;
+                break;
+            }
+        }
     }
-
+    
+    if (isPrime == 1)
+    {
+        printf("%d is a Prime number\n", num);
+    }
+    else
+    {
+        printf("%d is not a Prime number\n", num);
+    }
+    
     return 0;
 }
-

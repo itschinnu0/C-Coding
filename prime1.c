@@ -19,7 +19,7 @@ int main() {
         // Check for divisibility from 2 up to the square root of num
         // This optimization reduces the number of iterations needed
         //time complexity reduces
-        for (i = 2; i <= sqrt(num); i++) {
+        for (i = 2; i <= (int)sqrt(num); i++) {
             if (num % i == 0) {
                 isPrime = 0; // If a divisor is found, it's not prime
                 break;       // No need to check further

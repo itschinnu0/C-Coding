@@ -4,7 +4,7 @@ int main()
 
 {
 
-    int i, num, temp = 0; 
+    int i, num, temp = 0;
 
     // read input from user.
 
@@ -27,19 +27,16 @@ int main()
             temp++;
 
             break;
-
         }
+    }
 
-    } 
-
-    // check for the value of temp and num. 
+    // check for the value of temp and num.
 
     if (num != 0 && num != 1 && temp == 0)
 
     {
 
         printf("%d is a Prime number\n", num);
-
     }
 
     else
@@ -47,9 +44,7 @@ int main()
     {
 
         printf("%d is not a Prime number\n", num);
-
     }
 
     return 0;
 }
-
